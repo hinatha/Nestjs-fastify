@@ -21,7 +21,7 @@ export class TaskService {
       res.send(new BadRequestException(
         new AppResponseDto(400, undefined, 'Request is not multipart'),
       ))
-      return 
+      return
     }
     const mp = await req.multipart(this.handler, onEnd);
     // for key value pairs in request
