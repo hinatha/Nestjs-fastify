@@ -1,7 +1,19 @@
-export class FileUploadDto {
-    constructor(
-        public statusCode: Number,
-        public data: any = undefined,
-        public message: string = 'Success',
-    ) {}
-}
+import { ApiBody } from '@nestjs/swagger';
+
+export const ApiFile = (fileName: string = 'file'): MethodDecorator => (
+  target: any,
+  propertyKey: string,
+  descriptor: PropertyDescriptor,
+) => {
+  ApiBody({
+    schema: {
+      type: 'object',
+      properties: {
+        [fileName]: {
+          type: 'string',
+          format: 'binary',
+        },
+      },
+    },
+  })(target, propertyKey, descriptor);
+};
