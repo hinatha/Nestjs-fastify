@@ -10,10 +10,13 @@ This api has below function
 
 ```bash
 .
+├── .dockerignore
 ├── .eslintrc.js
 ├── .gitignore
 ├── .prettierrc
+├── Dockerfile
 ├── README.md
+├── docker-compose.yml
 ├── nest-cli.json
 ├── package-lock.json
 ├── package.json
@@ -36,7 +39,7 @@ This api has below function
 ├── tsconfig.json
 └── yarn.lock
 
-5 directories, 20 files
+5 directories, 23 files
 ```
 
 ## Using of language, framework, technology
@@ -46,6 +49,9 @@ This api has below function
 - TypeScript
 - fastify
 - SwaggerUI
+- Docker compose
+- ESLint
+- Prettier
 
 ## Requirement
 
