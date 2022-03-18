@@ -14,9 +14,7 @@ async function bootstrap() {
     new FastifyAdapter(),
   );
 
-  const options = new DocumentBuilder()
-    .setTitle('NestJS file upload')
-    .build();
+  const options = new DocumentBuilder().setTitle('NestJS file upload').build();
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('api', app, document);
 

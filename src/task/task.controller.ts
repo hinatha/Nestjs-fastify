@@ -11,7 +11,10 @@ export class TaskController {
   @Post('/uploadFile')
   @ApiConsumes('multipart/form-data')
   @ApiFile()
-  async uploadFile(@Req() req: fastify.FastifyRequest, @Res() res: fastify.FastifyReply<any>): Promise<any> {
-    return await this.taskService.uploadFile(req,res)
+  async uploadFile(
+    @Req() req: fastify.FastifyRequest,
+    @Res() res: fastify.FastifyReply<any>,
+  ): Promise<any> {
+    return await this.taskService.uploadFile(req, res);
   }
 }
